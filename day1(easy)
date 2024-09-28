@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int x;
+cout<<"Enter the score:"<<"\n";
+cin>>x;
+if(x>=12){
+    cout<<"yes, team is qualified for the next stage:"<<"\n";
+}else{
+    cout<<"NO,team is not qualified:"<<"\n";
+}
+return 0;
+}
