@@ -1,0 +1,34 @@
+
+#include <iostream>
+#include <cstring>
+#define N 4
+using namespace std;
+
+int targetindex(int num[N]){
+    int n;
+    cout<<"enter the target number:"<<"\n";
+    cin>>n;
+    for(int i=0;i<N;i++){
+        for(int j=i+1;j<N;j++){
+            int sum=num[i]+num[j];
+        if(sum==n){
+            cout<<"["<<i<<","<<j<<"]"<<"\n";
+         return 0;
+        }
+      }
+    }
+}
+int main(){
+    cout<<"for test case 1:"<<"\n";
+    int num1[N]={2,3,4,5};
+    targetindex(num1);
+
+    cout<<"for test case 2:"<<"\n";
+    int num2[N]={3,2,4};
+    targetindex(num2);
+
+    cout<<"for test case 3:"<<"\n";
+    int num3[N]={3,3};
+    targetindex(num3);
+    return 0;
+}
