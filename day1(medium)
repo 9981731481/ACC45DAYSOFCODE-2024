@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool vowel(char ch){
+if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+       return ch;     
+}
+}
+int main() {
+	int t;;//number of test case
+    string str;
+    cout<<"Enter the test case:"<<"\n";
+    cin>>t;
+    int consonant=0;
+    for(int i=1;i<=t;i++){
+    cout<<"Enter the number of string for case "<<i<<":\n";
+    cin>>str;
+    for(char ch :str){
+        if(!vowel(ch)){
+            consonant++;
+        }else{
+            consonant=0;
+        }
+    }
+    if(consonant>=4){
+        cout<<str<<" NO,easy to pronounce:"<<"\n";
+    }else{
+        cout<<str<<" Yes,easy to pronounce:"<<"\n";
+    }
+    }
+    return 0;
+    }
+
+
+
