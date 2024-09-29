@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+class student{
+    private:
+    string name;
+    double dsa_marks,toc_marks,dm_marks;
+    public:
+    void student1(string n){
+        name=n;
+        cout<<"name="<<name<<"\n";
+        cout<<"enter the marks for DSA,TOC and DM respectively:"<<"\n";
+        cin>>dsa_marks>>toc_marks>>dm_marks;
+    }
+
+    void rank(student s1,student s2){
+        cout<<"Better rank get by:"<<"\n";
+        int totalmarks1=s1.dsa_marks+s1.toc_marks+s1.dm_marks;
+        int totalmarks2=s2.dsa_marks+s2.toc_marks+s2.dm_marks;
+        if(totalmarks1>totalmarks2){
+           cout<<s1.name<<"\n";
+        }else if(totalmarks1<totalmarks2){
+           cout<<s2.name<<"\n";
+        }else if(totalmarks1==totalmarks2){
+           if(s1.dsa_marks>s2.dsa_marks){
+            cout<<s1.name<<"\n";
+           }else if(s1.dsa_marks<s2.dsa_marks){
+            cout<<s2.name<<"\n";
+           }else if(s1.dsa_marks==s2.dsa_marks && s1.toc_marks==s2.toc_marks && s1.dm_marks==s2.dm_marks){
+               cout<<"tie:"<<"\n";
+           }else{
+               if(s1.toc_marks>s2.toc_marks){
+                cout<<s1.name<<"\n";
+               }else{
+                cout<<s2.name<<"\n";
+               }
+           }
+        }
+        }
+};
+
+int main(){
+    int t;//for test case;
+    cout<<"enter the test case:"<<"\n";
+    cin>>t;
+    student st1,st2;
+    for(int i=1;i<=t;i++){
+    cout<<"for test case "<<i<<"\n";
+    st1.student1("dragon");
+    st2.student1("sloth");
+    student s3;
+    s3.rank(st1,st2);
+    }
+    return 0;
+}
