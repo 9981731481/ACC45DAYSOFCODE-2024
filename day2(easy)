@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void subscription_cost(){
+    int x;//for cost of chef tv subscription
+	float n;//for the number of number of members
+    cout<<"Cost for chef tv subscription= Rs"<<"\n";
+    cin>>x;
+    cout<<"Enter the number of members in a group:"<<"\n";
+    cin>>n;
+    int no_of_subscription=ceil(n/6);
+    cout<<"No os subscription="<<no_of_subscription<<"\n";
+    double mini_cost=x*no_of_subscription;
+    cout<<"minimum cost= Rs"<<mini_cost<<"\n";
+}
+int main() {
+	// your code goes here
+    int t;//for the number of test case;
+	cout<<"enter the no of test case:"<<"\n";
+    cin>>t;
+    for(int i=1;i<=t;i++){
+        cout<<"for test case"<<i<<"\n";
+        subscription_cost();
+    }
+
+    return 0;
+}
