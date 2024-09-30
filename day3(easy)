@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int t;//for the of test case
+    cout<<"Number of test case:"<<"\n";
+    cin>>t;
+    int days=4;//for the number of days monday to thursday
+    int x_hour;//no of working hour in monday to tuesday
+    int y_hour;//no of working hour on friday
+    for(int i=1;i<=t;i++){
+    cout<<"Test case"<<i<<"\n";
+    cout<<"Enter the hour of working from monday to thursday:"<<"\n";
+    cin>>x_hour;
+    cout<<"Enter the number of working hour on friday:"<<"\n";
+    cin>>y_hour;
+    int sum=0;
+    if(y_hour<x_hour){
+        int working_hour=days*x_hour+y_hour;
+        cout<<"working hour of 1 week:"<<working_hour<<"\n";
+    }
+    }
+    return 0;
+}
