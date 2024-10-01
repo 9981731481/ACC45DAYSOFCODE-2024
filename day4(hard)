@@ -1,0 +1,41 @@
+
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int longest_common_prefix(string strs[]){
+
+    int nofs=3;//no of elemnt in the string
+
+    if (nofs==0) {
+        cout << "" << endl;  
+        return 0;
+    }
+    string str1=strs[0];
+    for(int i=1;i<nofs;i++){
+        int j=0;
+        while(j<str1.length() && j<strs[i].length()&& str1[j]==strs[i][j]){
+            j++;
+        }
+        str1=str1.substr(0,j);//to reduce the common part
+    }
+    //if no common prefix is exits
+    if(str1.empty()){
+        cout<<" "<<"\n";
+    }
+
+    cout<<"longest common string is:"<<str1<<"\n";
+    return 0;
+}
+
+int main(){
+string strs1[3]={"flower","flow","flight"};
+longest_common_prefix(strs1);
+
+cout<<"\n";
+string strs2[4]={"dog","racecar","car"};
+longest_common_prefix(strs2);
+
+    return 0;
+}
