@@ -1,0 +1,16 @@
+#water filling
+
+t=int(input('Enter the number of test case:'))
+
+for i in range(1,t+1):
+    print(f"Enter for test case{i}")
+    b1=int(input('B1='))
+    b2=int(input('B2='))
+    b3=int(input('B3='))
+    if b1 in range(0,1+1) and b2 in range(0,1+1) and b3 in range(0,1+1):
+        blist=[b1,b2,b3]
+        zero=blist.count(0)#to count the number of zero
+        if zero>=2:
+            print('water filling time')
+        else:
+            print('not now')
