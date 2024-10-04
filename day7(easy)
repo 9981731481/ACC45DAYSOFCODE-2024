@@ -1,0 +1,17 @@
+t=int(input('Enter the number of test case:'))
+
+for i in range(1,t+1):
+    print('for test case',i)
+    x=int(input('Enter the starting time(in hrs):'))
+    maxtime=10  #maximum time for submittion
+
+    time=1 #janmansh take 1 hour to complete one assignment
+
+    n=3 #no of assignment
+
+    timetaken=n*time
+    if x<=9 and x>=1:
+        if x<10 and maxtime-x>=timetaken:
+            print('yes,he is able to submit',end='\n')
+        else:
+            print('No,he is not able to submit','\n')
