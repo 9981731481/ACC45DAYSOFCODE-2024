@@ -1,0 +1,20 @@
+#jump game
+def jump_step():
+    nums=[3,2,5,6,7,8]
+    print('array of nums=',nums)
+    index=0 #initially at first index
+    index=index+1
+    print('initially element jumped from 0 to',index)
+    num1=nums[index] #to get how mush times to jump
+    print(f"Now element have to jumped {num1} times")
+    i=0
+    while i!=(num1+1):
+        i+=1
+    if nums[i]==nums[len(nums)-1]:
+        print(f"Its maximum jump is {nums[i]}")
+        return True
+    else:
+        print(f"Its maximum jump is {nums[i]}")
+        return False
+
+print('Reach at the last index ?',jump_step())
