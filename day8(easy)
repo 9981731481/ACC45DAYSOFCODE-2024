@@ -1,0 +1,21 @@
+#monopoly
+def monopoly():
+    P=int(input('profit of A company(in lakh)='))
+    Q=int(input('profit of B company(in lakh)='))
+    R=int(input('profit of C company(in lakh)='))
+    S=int(input('profit of D company(in lakh)='))
+    profit=[P,Q,R,S]
+    total=sum(profit) #toTal sum of profit
+
+    for i in range(0,len(profit)):
+        if profit[i]>(total-profit[i]):
+            return True
+
+t=int(input('Enter numnber of test case:'))
+for i in range(1,t+1):
+    print('Test case:',t)
+
+    if monopoly()==True:
+        print('yes,Monopoly in market',end='\n')
+    else:
+        print('No,Monypoly in market',end='\n')
