@@ -1,0 +1,14 @@
+def coller_pur():
+    purchasing=int(input('Enter the purchasing rate of cooler'))
+    rent=int(input('Enter the rent for cooler per month'))
+    rent1=0
+    i=0
+    while rent1<purchasing :
+        i=i+1
+        rent1=rent+rent1
+    print(f"Month={i-1},  Amount={rent1-rent}")
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    coller_pur()
