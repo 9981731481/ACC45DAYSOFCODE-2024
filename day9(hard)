@@ -1,0 +1,21 @@
+#plus one
+def plusone():
+    digit=input('Enter the elements:').split()
+    print('original=',digit)
+    value="".join(digit)
+
+    digit=int(value)
+
+    digit=digit+1 #perform plus one
+
+    digit=str(digit)
+
+    digit=[i for i in digit]
+    digit=[int(i) for i in digit]
+
+    print(digit)
+
+t=int(input('Enter the no of test case:'))
+for i in range(1,t+1):
+    print('test case',i)
+    plusone()
