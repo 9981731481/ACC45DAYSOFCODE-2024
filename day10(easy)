@@ -1,0 +1,22 @@
+#weight
+def weight(wei_x,wei_y,wei_z,wei_ob):
+    x=wei_x;y=wei_y;z=wei_z #weight of three weight
+    w=wei_ob #weight of object
+    if w==x or w==y or w==z:
+        print('yes',end='\n')
+    elif w==(x+y) or w==(y+z) or w==(z+x):
+        print('yes',end='\n')
+    elif w==(x+y+z):
+        print('yes',end='\n')
+    else:
+        print('No',end='\n')
+
+t=int(input('Enter the number of test case:'))
+for i in range(1,t+1):
+    print('For test case',i)
+    w=int(input('object weight W='))
+    x=int(input('weight x='))
+    y=int(input('weight y='))
+    z=int(input('weight z='))
+    weight(x,y,z,w)
+
