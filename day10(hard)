@@ -1,0 +1,24 @@
+def valid_parenthe():
+    string=input('enter the string:')
+
+    brackets={'(':')','{':'}','[':']'} #creating dic..
+
+    stack=[] #taking stack
+
+    for ch in string:
+        if ch in brackets.keys(): #for open brackets
+            stack.append(ch)
+        elif ch in brackets.values(): #for closing brackets
+            if stack and brackets[stack[-1]]==ch:
+                stack.pop()
+            else:
+                return False  #if right combination is not found
+
+        else:
+            return False #invalid operator used
+
+    return len(stack)==0
+t=int(input('enter the number of test case:'))
+for i in range(1,t+1):
+    print('test case:',i)
+    print('string is valid=',valid_parenthe())
