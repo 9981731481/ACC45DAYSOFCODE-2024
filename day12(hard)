@@ -1,0 +1,11 @@
+#to convert int into roman
+import roman as ro #importing the library
+
+def inttoroman():
+    num=int(input('Enter the number'))
+    roman_no=ro.toRoman(num) #to get the roman value
+    return roman_no
+t=int(input('Enter the number of test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    print('Roman number',inttoroman())
