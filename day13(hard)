@@ -1,0 +1,11 @@
+def jump(nums):
+    n = len(nums)
+    jumps = 0
+    current_start, current_end = 0, 0
+    
+    while current_end < n - 1:
+        jumps += 1
+        f= max(i + nums[i] for i in range(current_start, current_end + 1))
+        current_start, current_end = current_end + 1, f
+        
+    return jumps
