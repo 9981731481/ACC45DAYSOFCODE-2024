@@ -1,0 +1,16 @@
+def encode_message(String):
+    N=len(String)
+    swap_list = list(String)
+    for i in range(0, N-1, 2):
+        swap_list[i], swap_list[i + 1] = swap_list[i + 1], swap_list[i]
+    swap_str = ''.join(swap_list)
+
+    encoded_str = ''.join(chr(219 - ord(ch)) for ch in swap_str)
+
+    return encoded_str
+
+
+t = int(input())
+for i in range(t):
+    S = input().strip()
+    print(encode_message(S))
