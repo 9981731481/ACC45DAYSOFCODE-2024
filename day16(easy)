@@ -1,0 +1,12 @@
+#No of notebook
+def notebook():
+    wp=int(input('Enter the weight of page(in kg)'))
+    pages=1000*wp# total no of pages
+    notebook=10*wp
+    print('Total no of pages=',pages)
+    print('Total no of notebook=',notebook)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    notebook()
