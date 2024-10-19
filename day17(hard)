@@ -1,0 +1,10 @@
+#To calculate the x raised to the power n
+
+def power(x,n):
+    return x**n;
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    x=float(input('Enter the num:'))
+    n=float(input('Enter th power:'))
+    print('result=',power(x,n))
