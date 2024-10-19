@@ -4,9 +4,9 @@ def timetaken():
     t_bike=int(input('Time taken by the bike to reach the home(IN MIN)='))
 
     if t_bike>t_car:
-        print("Bike is faster the car:")
-    elif t_bike<t_car:
         print("Car is faster the bike:")
+    elif t_bike<t_car:
+        print("Bike is faster the car:")
     else:
         print("Same timetaken by both car and bike:")
 
