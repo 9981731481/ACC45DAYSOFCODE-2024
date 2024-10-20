@@ -1,0 +1,85 @@
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+#define N 3
+struct node{
+    int data;
+    struct node*next;
+};
+struct node*head,*tail;
+
+void create_list(int arr[]){
+    for(int i=0;i<N;i++){
+    struct node*newnode;
+    newnode=new struct node;
+    newnode->data=arr[i];
+    newnode->next=0;
+    if(head==0){
+        head=tail=newnode;
+    }else{
+        tail->next=newnode;
+        tail=newnode;
+    }
+    }
+}
+
+void display(){
+    struct node*temp;
+    temp=head;
+    while(temp!=0){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+}
+void reverse_list(){
+    struct node*currentnode,*prevnode,*nextnode;
+    currentnode=nextnode=head;
+    prevnode=0;
+    while(currentnode!=0){
+        nextnode=currentnode->next;
+        currentnode->next=prevnode;
+        prevnode=currentnode;
+        currentnode=nextnode;
+    }
+    currentnode=head;
+    head=tail;
+    tail=currentnode;
+}
+int main(){
+    int arr1[N]={2,4,3};
+    int arr2[N]={5,6,4};
+    //for link list first;
+    cout<<"reverse link list 1:"<<"\n";
+    create_list(arr1);
+    reverse_list();
+    display();
+    
+    cout<<"\nreverse link list 2:"<<"\n";
+    head=0;
+    create_list(arr2);
+    reverse_list();
+    display();
+
+    //to convert intger into string
+    string str1,str2;
+    for(int i:arr1){
+        str1=str1+to_string(i);
+    }
+    for(int i:arr2){
+        str2=str2+to_string(i);
+    }
+    int sumofarr;
+    sumofarr=stoi(str1)+stoi(str2);
+    string str = to_string(sumofarr); 
+    int array[N];
+    for(int i=0;i<N;i++){
+        array[i]=str[i]-'0';
+    }
+    cout<<"\nsum of two link list:"<<"\n";
+    head=0;
+    create_list(array);
+    reverse_list();
+    display();
+    return 0;
+}
