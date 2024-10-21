@@ -1,0 +1,19 @@
+def testscore():
+    n=int(input('Enter the number of question:'))
+    x=int(input('Enter the marks of every individual:'))
+    y=int(input('Enter the marks that wants:'))
+    num=0
+    while num!=y:
+        if num<y:
+            num=num+x
+        else:
+            break
+    if num==y:
+        print('Yes')
+    else:
+        print('No')
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    testscore()
