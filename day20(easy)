@@ -1,0 +1,15 @@
+#test score
+def testscore():
+    n1,n2,n3,n4=input().split()
+    n1,n2,n3,n4=int(n1),int(n2),int(n3),int(n4)
+    n=(n1,n2,n3,n4)
+    inlim=1
+    outlim=0
+    if inlim in n:
+        print('Out')
+    else:
+        print('In')
+t=int(input('Enter the number of test case:'))
+for i in range(1,t+1):
+    print(f"test case:{i}")
+    testscore()
