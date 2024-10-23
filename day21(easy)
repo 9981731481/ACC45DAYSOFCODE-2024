@@ -1,0 +1,19 @@
+#game_attack
+import math
+def game_attack(h,x,y):
+    #for normal attack
+    normal_attack=math.ceil(h/x)
+    #for special attack
+    health_point=0
+    if h<=y:
+        health_point=1
+    else:
+        health_point=1+math.ceil((h-y)/x)
+    return min(normal_attack,health_point)
+t=int(input('Enter the number of test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    h=int(input('Enter the health point:')) #no of health point
+    x=int(input('Enter the normal attack:'))#normal attack
+    y=int(input('Enter the special attack:'))#special attack
+    print(game_attack(h,x,y))
