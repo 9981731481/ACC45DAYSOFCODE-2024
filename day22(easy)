@@ -1,0 +1,16 @@
+#to print the higher degree of polynomial
+def pow_poly():
+    N=int(input('Enter the number of terms:'))
+    poly=input('Enter the polynomial:').split()
+    poly=list(int(poly[i]) for i in range(0,N))
+
+    power=0
+    while poly[-1]==0:
+        poly.pop() #to remove all the zero from the last
+    print('Maximum power=',len(poly)-1)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    pow_poly()
+    t+=1
