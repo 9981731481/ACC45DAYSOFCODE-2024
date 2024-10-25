@@ -1,0 +1,14 @@
+from collections import Counter
+def remove_element(arr):
+    frequency=Counter(arr)
+    max_freq=max(frequency.values())
+    operation=len(arr)-max_freq
+    return operation
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    N=int(input('Enter the number of elements:'))
+    arr=input('Enter the list elements:').split()
+    arr=list(int(arr[i]) for i in range(0,N))
+    print(remove_element(arr))
