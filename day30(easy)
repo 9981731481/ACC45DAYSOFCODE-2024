@@ -1,0 +1,26 @@
+
+#Is the score consistent
+def score(T):
+    i=0
+    while i!=T:
+        print('Test case:',i+1)
+        A,B=input('Enter the current score of team 1 and 2:').split()
+        C,D=input('Enter the later score of team 1 and 2:').split()
+        A,B,C,D=int(A),int(B),int(C),int(D)
+        while A!=C:
+            A+=1
+            if A>C:
+                break
+        while B!=D:
+            B+=1
+            if B>D:
+                break
+        if A==C and B==D:
+            print('possible:')
+        else:
+            print('impossible:')
+
+        i+=1
+
+T=int(input('Enter the test case:'))
+score(T)
