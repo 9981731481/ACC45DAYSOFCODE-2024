@@ -1,0 +1,40 @@
+def letter_combi():
+    #letter combination of phone number
+    letter_no={
+        "2":"abc",
+        "3":"def",
+        "4":"ghi",
+        "5":"jkl",
+        "6":"mno",
+        "7":"pqrs",
+        "8":"tuv",
+        "9":"wxyz"
+        }
+    n=input('Enter the digit:') #to get the phone number
+    digit=list(n[i] for i in range(len(n)))
+    string=""
+    letters=[]
+    if n=='""': # if the No number
+        print([])
+    else:
+        for i in digit:
+            string=letter_no[i]
+            letters.append(list(j for j in string)) #to get the list of letters
+        if len(letters)==1:
+            print(letters) #to print the combination
+        elif len(letters)>=2:
+            from itertools import product #import the library to product the two list
+            combination=[]
+            for i in range(len(letters)-1):
+                combination.append(list(product(letters[0],letters[i+1])))
+                letters[0]=combination[0]
+            print(combination)#the require combination of letters
+
+
+t=int(input('Enter the test case:'))
+i=0
+while i!=t:
+    print('Test case:',i)
+    letter_combi()
+    i+=1
+
