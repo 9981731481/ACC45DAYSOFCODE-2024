@@ -1,0 +1,24 @@
+#remove the elements:
+def elements():
+    nums=input('Enter the elements of array:').split()
+    nums=list(map(int,nums))
+    val=int(input('Enter the val=')) # value to remove
+    cou_value=nums.count(val) #count the no of occurance of 'val' in the list
+
+    nums=list(i for i in nums if i!=val)#list after removing the val
+    nums.sort() #sorting the elements
+    k=len(nums)
+
+    for i in range(cou_value):
+        nums.append('_')
+    print('nums=',nums)
+
+    if val!=k:
+        return k
+
+t=int(input('Enter the test case:'))
+i=0
+while i!=t:
+    print('Test case:',i+1)
+    print(elements())
+    i+=1
