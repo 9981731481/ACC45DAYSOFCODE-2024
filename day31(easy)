@@ -1,0 +1,11 @@
+#chef fantasy 11
+def caption_vice_caption():
+    N=int(input('Enter the players:'))
+    if N<=11:
+        no_of_choice=N*(N-1)
+        return no_of_choice
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    print('No of possible choice:',caption_vice_caption())
