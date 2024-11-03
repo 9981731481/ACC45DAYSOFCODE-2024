@@ -1,0 +1,9 @@
+#permutation II
+from itertools import permutations as perm
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    nums=input('Enter the numbers:').split()
+    nums=list(map(int,nums))
+    value=list(set(perm(nums)))
+    print('Possible permutations=',value)
