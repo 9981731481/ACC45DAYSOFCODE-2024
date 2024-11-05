@@ -1,0 +1,19 @@
+def blackjack():
+    A,B=input('Enter the two number:').split()
+    A,B=int(A),int(B)
+    z=A+B
+    num=0
+
+    for num in range(A,B+1):
+        if z+num==21:
+            break
+
+    if z+num==21:
+        print(num)
+    else:
+        print(-1)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    blackjack()
