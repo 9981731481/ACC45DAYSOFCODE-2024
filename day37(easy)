@@ -1,0 +1,21 @@
+#minimum number of flips
+
+class operation:
+    def __init__(self):
+        N=int(input('Enter the no of elements:'))
+        arr=input('Enter the arr:').split()
+        arr=list(int(arr[i]) for i in range(0,N))
+        print(arr)
+        arr=list(i for i in arr if i==1 or i==-1)
+        asum=sum(arr)
+        if asum%2!=0:
+            print(-1)
+        else:
+            op=int(abs(asum)/2)
+            print('min operation:',op)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    op=operation()
+    print('\n')
