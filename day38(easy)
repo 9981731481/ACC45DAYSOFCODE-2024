@@ -1,0 +1,19 @@
+#Binary battel
+def binarybattel():
+    N,A,B=input('Enter the teams(N),span time(A),break time(B)').split()
+    N,A,B=int(N),int(A),int(B)
+    nround=0
+    while N!=1:
+        N=N/2
+        nround+=1
+
+    print('No of round:',nround)
+
+    timetaken=nround*A+(nround-1)*B
+
+    print(timetaken)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    binarybattel()
