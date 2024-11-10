@@ -1,0 +1,19 @@
+#palindrom II
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    num=input('Enter the string:')
+    if num==num[::-1]:
+        print('Yes')
+    else:
+        palindrom=bool
+        for i in range(len(num)):
+            temp=num[0:i]+num[i+1:]
+            if temp==temp[::-1]:
+                palindrom=True
+                break
+        if palindrom==True:
+            print('Yes')
+        else:
+            print('No')
