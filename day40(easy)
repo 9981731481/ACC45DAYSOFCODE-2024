@@ -1,0 +1,11 @@
+#watching movie
+def movie(x,y):
+    if y%2==0: #whether even or not
+        f_w=y/2
+        r_w=x-y
+        return f_w+r_w
+t=int(input('enter the test case:'))
+for i in range(1,t+1):
+    x=int(input('Enter the total minute of watching(X):'))
+    y=int(input('Enter the minute decided to watch(Y):'))
+    print(movie(x,y),'min')
