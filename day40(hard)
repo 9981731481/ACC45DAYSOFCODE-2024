@@ -1,0 +1,18 @@
+
+from collections import Counter
+def freq_elements():
+    nums=input('Enter the array:').split()
+    nums=list(map(int,nums))
+    freq=Counter(nums)
+    target=int(input('Enter the K=:'))
+    collect=[]
+    for i in freq.keys():
+        if freq[i]>=target:
+            collect.append(i)
+
+    print('output:',collect)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    freq_elements()
