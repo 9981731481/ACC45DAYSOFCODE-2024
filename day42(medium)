@@ -1,0 +1,16 @@
+def cells_under_attack(N, X, Y):
+
+    vertical_and_horizontal = 2 * (N - 1)
+    top_left_to_bottom_right = min(X - 1, Y - 1) + min(N - X, N - Y)
+    top_right_to_bottom_left = min(X - 1, N - Y) + min(N - X, Y - 1)
+    return vertical_and_horizontal + top_left_to_bottom_right + top_right_to_bottom_left
+
+T = int(input())
+results = []
+for _ in range(T):
+    N, X, Y = map(int, input().split())
+    results.append(cells_under_attack(N, X, Y))
+
+# Output:
+for result in results:
+    print(result)
