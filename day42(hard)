@@ -1,0 +1,14 @@
+def anagrams():
+    words = input('Enter the words:').split()
+    uniquewords = []
+
+    for word in words:
+        sort_word = "".join(sorted(word))
+        if all("".join(sorted(w)) != sort_word for w in unique_words):
+            uniquewords.append(word)
+    print(uniquewords)
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    anagrams()
