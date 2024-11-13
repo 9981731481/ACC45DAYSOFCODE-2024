@@ -1,0 +1,13 @@
+#get lowest free
+t=int(input('Enter the test case:'))
+i=0
+while i<t:
+    print('Test case:',i+1)
+    cost=input('Enter the cost of 3 items:').split()
+    cost=list(map(int,cost))
+    min_cost=min(cost)
+
+    cost.remove(min_cost)
+    total_cost=sum(cost)
+    print('Total cost=',total_cost)
+    i+=1
