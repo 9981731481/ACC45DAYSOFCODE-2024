@@ -1,0 +1,16 @@
+#pass or fail
+def pass_or_fail():
+    N=int(input('Enter the no of question:'))
+    X=int(input('Enter the correct no of question:'))
+    P=int(input('Enter the marks that he must score:'))
+    Y=N-X # no of incorrect question
+    Pass=3*X-Y
+    if Pass>=P:
+        print('PASS')
+    else:
+        print('FAIL')
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    pass_or_fail()
