@@ -1,0 +1,18 @@
+def swap():
+    string=input('Enter the start:')
+    result=input('Enter the result:')
+
+    string=string.replace("RX","XR",2)
+    string=string.replace("XL","LX",2)
+    print(string)
+
+    if string==result:
+        return True
+    else:
+        return False
+
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    print(swap())
+
