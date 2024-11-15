@@ -1,0 +1,13 @@
+#chef eren
+def duration():
+    N,A,B=input('Enter the N,A,B=').split()
+    N,A,B=int(N),int(A),int(B)
+
+    odd=len(list(i for i in range(1,N+1) if i%2==0))
+    even=len(list(i for i in range(1,N+1) if i%2!=0))
+    Total_duration=even*A+odd*B
+    print('Total duration=',Total_duration)
+t=int(input('Enter the test case:'))
+for i in range(1,t+1):
+    print('Test case:',i)
+    duration()
