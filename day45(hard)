@@ -1,0 +1,48 @@
+
+
+#link list
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+class llist:
+    def __init__(self):
+        self.head=None
+        self.tail=None
+
+    def link_list(self,data):
+        newnode=node(data)
+        if self.head==None:
+            self.head=self.tail=newnode
+        else:
+            self.tail.next=newnode
+            self.tail=newnode
+
+    def display(self):
+        temp=self.head
+        while temp!=self.tail:
+            print(temp.data,"->",end="")
+            temp=temp.next
+        print(temp.data,"->",end="")
+        print('None')
+
+
+l1=llist()
+l2=llist()
+num=input('Enter the elements:').split()
+num=list(map(int,num))
+print('Original list:')
+for i in num:
+    l1.link_list(i)
+l1.display()
+
+oddno=num[0:len(num):2]
+evenno=num[1:len(num):2]
+link=oddno+evenno
+
+print('modified list:')
+for i in link:
+    l2.link_list(i)
+l2.display()
+
